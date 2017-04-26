@@ -1,3 +1,6 @@
 #!/usr/bin/env sh
 echo "This software may collect information about you and your use of the software, and send that to Microsoft."
 echo "Please visit http://aka.ms/dotnet-cli-eula for more information."
+
+# Run 'dotnet new' to trigger the first time experience to initialize the cache
+$install_root/dotnet new > /dev/null 2>&1 || true
